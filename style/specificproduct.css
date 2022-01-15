@@ -1,0 +1,39 @@
+header {
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 10;
+  background: linear-gradient(rgb(255, 147, 75), rgb(255, 99, 99));
+}
+header a{
+  text-decoration: none;
+  color: #000;
+}
+
+.productcontainer {
+  padding-top: 60px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.cardcontainer{
+    min-height: calc(100vh - 295px);
+}
+
+.crosscontainer img{
+  height: 30px;
+  width: 30px;
+}
+.category img{
+  height: 50px;
+  width: 50px;
+}
+  
+

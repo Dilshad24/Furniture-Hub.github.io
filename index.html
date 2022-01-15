@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Hub</title>
+    <link rel="stylesheet" href="style/style.css">
+    
+    <script src="./db/db.js"></script>
+</head>
+<body id="body" onload="onloadfunction()">
+    <div class="loading" id="loading">
+        <img src="./icons/loading.gif" alt="">
+    </div>
+    <script>
+        var preloaderp = document.getElementsByClassName('loading');
+            function onloadfunctionp() {
+                console.log('loaded-------')
+                preloaderp.style.display = 'none';
+                document.getElementById("body").style.overflowY = "scroll";
+
+            }
+    </script>
+    <header class="header" >
+        <h2>Furniture Hub.io</h2>
+        <div class="headerchild">
+            <svg onclick="clicksearch();" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256"
+                height="256" viewBox="0 0 256 256" xml:space="preserve">
+                <defs>
+                </defs>
+                <g   transform="translate(128 128) scale(0.72 0.72)" style="">
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                        transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+                        <path id="searchicon"
+                            d="M 87.803 77.194 L 68.212 57.602 c 9.5 -14.422 7.912 -34.054 -4.766 -46.732 c 0 0 -0.001 0 -0.001 0 c -14.495 -14.493 -38.08 -14.494 -52.574 0 c -14.494 14.495 -14.494 38.079 0 52.575 c 7.248 7.247 16.767 10.87 26.287 10.87 c 7.134 0 14.267 -2.035 20.445 -6.104 l 19.591 19.591 C 78.659 89.267 80.579 90 82.498 90 s 3.84 -0.733 5.305 -2.197 C 90.732 84.873 90.732 80.124 87.803 77.194 z M 21.48 52.837 c -8.645 -8.646 -8.645 -22.713 0 -31.358 c 4.323 -4.322 10 -6.483 15.679 -6.483 c 5.678 0 11.356 2.161 15.678 6.483 c 8.644 8.644 8.645 22.707 0.005 31.352 c -0.002 0.002 -0.004 0.003 -0.005 0.005 c -0.002 0.002 -0.003 0.003 -0.004 0.005 C 44.184 61.481 30.123 61.48 21.48 52.837 z"
+                            
+                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </g>
+            </svg>
+            <a href="second.html">MyWork</a>
+            <a href="">Contact</a>
+        </div>
+    </header>
+    <div id='main' class="main">
+        
+        <canvas class="canvas" id="webg1" ></canvas>
+        <script type="module">
+            import {init,animate} from './js/index.js';
+            const el = document.getElementById("webg1");
+             console.log(el)
+             var id='#webg1';
+             var model='models/furniture/seating/chair/chear4/1k/Green Chair1.gltf';
+             var pointlightintensity=.1;
+             el.addEventListener("click", init(id,model,pointlightintensity), false)
+             el.addEventListener("click",animate(), false)
+        </script> 
+        <div class="addtextcontainer">
+            <p>Next Gen Furniture is here ....</p>
+        </div>
+        <div id="searchpopupcontainer" class="searchpopupcontainer">
+            <div class="crosscontainer">
+                <a href="">
+                    <svg onclick="clickhome();" class="crossicon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                    
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                            <path id="crossiconid" d="M395 5076 c-170 -41 -316 -188 -355 -356 -28 -120 -7 -261 54 -364
+                                    14 -23 419 -435 900 -916 l876 -875 -888 -890 c-956 -958 -930 -929 -967
+                                    -1070 -29 -115 -13 -234 47 -347 94 -177 315 -263 549 -214 140 30 103 -3
+                                    1054 947 484 483 885 879 890 879 5 0 406 -395 890 -879 816 -815 885 -881
+                                    945 -909 207 -96 457 -57 600 94 135 142 166 360 78 543 -29 61 -99 133 -927
+                                    958 l-896 891 871 874 c543 544 881 890 897 918 44 78 60 152 55 259 -6 115
+                                    -30 185 -93 269 -123 163 -346 232 -540 166 -111 -37 -161 -84 -1029 -953
+                                    l-850 -850 -875 872 c-941 936 -918 916 -1056 952 -69 18 -160 18 -230 1z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="searchcontainer">
+                <div class="searchbox">
+                    <form action="../pages/specificproduct.html" method="get">
+                        <input type="text" name="type">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>  
+            </div>
+            <div class="category">
+                <a href="../pages/specificproduct.html?type=chair">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 30 30" class="category-icon">
+                        
+                        <path id="categorysvg"
+                            d="M20.3 22.5a.52.52 0 0 0 .2-.4v-.3a2.75 2.75 0 0 0-1.2-2.2v-7.1a1.32 1.32 0 0 0-1.3-1.3h-6.2a1.26 1.26 0 0 0-1.3 1.3v7.1a2.51 2.51 0 0 0-1.2 2.2v.3a.52.52 0 0 0 .2.4l-.8 7.1a.35.35 0 0 0 .4.4h.8a.66.66 0 0 0 .5-.4l1.7-7.1h5.8l1.7 7.1a.54.54 0 0 0 .5.4h.8a.35.35 0 0 0 .4-.4zm-.12 6.7l-1.49-6.7h.9l.94 6.7h-.35zm-9-16.7a.47.47 0 0 1 .5-.5h6.2a.47.47 0 0 1 .5.5v6.8a1.31 1.31 0 0 0-.5-.1H11.7a.9.9 0 0 0-.5.1v-6.8zM9.75 29.2H9.5l.89-6.7h.9zm.15-7.5a1.77 1.77 0 0 1 1.8-1.7h6.2a1.84 1.84 0 0 1 1.8 1.7H9.9z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="../pages/specificproduct.html?type=shelves">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                        <path id="categorysvg"
+                            d="M17 22c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm-9.5-3.7l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm2-.2l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0-8L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm-2 8.2l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm2-.2l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zM17 22c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm0 0c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm-7.5-3.9l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm-2 .2l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm0 0l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm2-.2l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0-8L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zM17 22c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm0 0c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zM9.5 10.1L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0 8l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm-2 .2l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm0 0l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm2-.2l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0-8L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zM17 22c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm-9.5-3.7l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm2-.2l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0-8L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zM17 22c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm0 0c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zM9.5 10.1L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0 8l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm-2 .2l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm0 0l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm2-.2l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0-8L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zM17 22c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm0 0c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zM9.5 10.1L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0 8l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm-2 .2l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zM17 22c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm0 0c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm0 0c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5s.5-.2.5-.5v-2c0-.3-.2-.5-.5-.5zm-9.5-3.7l-.9-3.9c0-.3-.3-.4-.6-.4-.3.1-.4.3-.4.6l.9 3.9c.1.3.3.4.6.4.3-.1.5-.4.4-.6zm2-.2l-1.6-3.6c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm0-8L7.9 6.5c-.1-.3-.4-.4-.7-.3s-.4.4-.3.7l1.6 3.7c.1.3.4.4.7.2s.4-.4.3-.7zm15-7.1h-19a1 1 0 0 0-1 1v23c0 .6.5 1 1 1h1v1.5c0 .3.2.5.5.5s.5-.2.5-.5V28h15v1.5c0 .3.2.5.5.5s.5-.2.5-.5V28h1c.6 0 1-.5 1-1V4c0-.5-.5-1-1-1zm-10 24h-9v-7h9v7zm0-8h-9v-7h9v7zm0-8h-9V4h9v7zm10 16h-9v-7h9v7zm0-8h-9v-7h9v7zm0-8h-9V4h9v7zm-17.3-.1c-.3.1-.5-.1-.6-.4l-.9-3.9c-.1-.3.1-.5.4-.6s.5.1.6.4l.9 3.9c0 .2-.2.5-.4.6zM24.3 7l-1.6 3.7c-.1.3-.4.4-.7.2s-.4-.4-.3-.7l1.6-3.7c.1-.3.4-.4.7-.2.3.1.4.4.3.7zm-1.4.5l-2.4 3.2c-.2.2-.5.3-.7.1s-.3-.5-.1-.7l2.4-3.2c.2-.2.5-.3.7-.1.2.1.2.4.1.7zm1.3 7.3l-1.6 3.7c-.1.3-.4.4-.6.2-.2-.1-.4-.4-.3-.7l1.6-3.7c.1-.3.4-.4.7-.3.2.3.3.6.2.8zm-2-.1l-.9 3.9c-.1.3-.3.4-.6.4-.3-.1-.4-.3-.4-.6l.9-3.9c.1-.3.3-.4.6-.4s.4.3.4.6zm-10.8 4c-.2.2-.5.1-.7-.1l-2.2-3.3c-.1-.2-.1-.5.1-.7s.5-.1.7.1l2.2 3.3c.2.3.1.6-.1.7zm2.1 3.8v2c0 .3-.2.5-.5.5s-.5-.2-.5-.5v-2c0-.3.2-.5.5-.5s.5.2.5.5z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="../pages/specificproduct.html?type=sofa">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 30 30" class="category-icon">
+                        
+                        <path id="categorysvg"
+                            d="M27.5 19.4H27v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1h-.5A2.48 2.48 0 0 0 0 21.9v4a2.48 2.48 0 0 0 2.5 2.5h.2v1.1a.47.47 0 0 0 .5.5H5a.47.47 0 0 0 .5-.5v-1.1h19.2v1.1a.47.47 0 0 0 .5.5H27a.47.47 0 0 0 .5-.5v-1.1h.1a2.48 2.48 0 0 0 2.5-2.5v-4a2.63 2.63 0 0 0-2.6-2.5zM4 18.4a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v1.5a2.61 2.61 0 0 0-1 2v1.5H5v-1.5a2.61 2.61 0 0 0-1-2v-1.5zM4.4 29h-.8v-.6h.8v.6zm22 0h-.8v-.6h.8v.6zm2.6-3.1a1.54 1.54 0 0 1-1.5 1.5h-25A1.54 1.54 0 0 1 1 25.9v-4a1.54 1.54 0 0 1 1.5-1.5A1.54 1.54 0 0 1 4 21.9v2a.47.47 0 0 0 .5.5h21a.47.47 0 0 0 .5-.5v-2a1.5 1.5 0 0 1 3 0v4z">
+                        </path>
+                        <circle cx="8.6" cy="19.2" r=".4"></circle>
+                        <circle cx="15" cy="19.2" r=".4"></circle>
+                        <circle cx="21.4" cy="19.2" r=".4"></circle>
+                    </svg>
+                </a>
+                <a href="../pages/specificproduct.html?type=table">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 30 30" class="category-icon">
+                        <path id="categorysvg"
+                            d="M27 19.6H2.85a.47.47 0 0 0-.5.5v9.4a.47.47 0 0 0 .5.5h3.8a.47.47 0 0 0 .5-.5v-5.7h15.8v5.7a.47.47 0 0 0 .5.5h3.7a.47.47 0 0 0 .5-.5v-9.4a.77.77 0 0 0-.65-.5zm-.45 9.4h-2.7v-5.7a.47.47 0 0 0-.5-.5H6.65a.47.47 0 0 0-.5.5V29h-2.8v-8.4h23.2V29z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="../pages/specificproduct.html?type=decore">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 30 30" class="category-icon">
+                        <path id="categorysvg"
+                            d="M20.88 10l-2-7.6a.63.63 0 0 0-.6-.5h-6.6a.56.56 0 0 0-.6.5l-2 7.6a.78.78 0 0 0 .7 1h4.7v18H13a.5.5 0 0 0 0 1h4a.5.5 0 1 0 0-1h-1.5V11h2v4.1a1.5 1.5 0 0 0-1 1.4 1.5 1.5 0 0 0 3 0 1.41 1.41 0 0 0-1-1.4V11h1.7a.68.68 0 0 0 .68-1zm-2.2 6.5a.7.7 0 1 1-.7-.7.68.68 0 0 1 .7.7zm-8.6-6.5L12 3h6.1l1.9 7h-9.9z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="../pages/specificproduct.html?type=bed">
+                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 30 30" class="category-icon">
+                    <path id="categorysvg"
+                        d="M28 24h-.5v-2a2 2 0 0 0-2-2h-20v-5a2 2 0 0 0-4 0v12.5a.47.47 0 0 0 .5.5h1.5v1.5a.47.47 0 0 0 .5.5h2a.47.47 0 0 0 .5-.5V28h17v1.5a.47.47 0 0 0 .5.5h2a.47.47 0 0 0 .5-.5V28H28a.47.47 0 0 0 .5-.5v-3a.47.47 0 0 0-.5-.5zM5.5 21h20a1 1 0 0 1 1 1v2h-21v-3zm-3-6a1.08 1.08 0 0 1 1-1 1 1 0 0 1 1 1v9h-2v-9zm3 14h-1v-1h1v1zm20 0h-1v-1h1v1zm2-2h-25v-2h25v2z">
+                    </path>
+                </svg>
+                </a> 
+            </div>      
+        </div>
+        
+    </div>
+    
+     <div class="productcontainer">
+         <div class="productcontainerchild1">
+            <h1>Products</h1>
+         </div>
+         <div class="productcontainerchild2">
+             <div class="viewmore">
+                <h2>Sitting</h2>
+                    <script>
+                        var link = "pages/specificproduct.html?type='seating'"
+                        document.write('<a href="'+link+'">View More</a>')
+                    </script>
+             </div>
+             <div class="cardcontainer">
+                 <script>
+                    getseatingdata();
+                 </script>
+             </div>
+         </div>
+          <div class="productcontainerchild2">
+             <div class="viewmore">
+                <h2>Shelves</h2>
+                <script>
+                    var link = "pages/specificproduct.html?type='shelves'"
+                    document.write('<a href="' + link + '">View More</a>')
+                </script>
+             </div>
+             <div class="cardcontainer">
+                 <script>
+                    getshelvesdata();
+                 </script>
+             </div>
+         </div>
+          <div class="productcontainerchild2">
+             <div class="viewmore">
+                <h2>Tables</h2>
+                <script>
+                    var link = "pages/specificproduct.html?type='table'"
+                    document.write('<a href="' + link + '">View More</a>')
+                </script>
+             </div>
+             <div class="cardcontainer">
+                 <script>
+                    gettabledata();
+                 </script>
+             </div>
+         </div>
+        
+     </div>
+
+     <div class="footer">
+         <h1>Thanks For Support ........</h1>
+     </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.js"
+    integrity="sha512-UgS0SVyy/0fZ0i48Rr7gKpnP+Jio3oC7M4XaKP3BJUB/guN6Zr4BjU0Hsle0ey2HJvPLHE5YQCXTDrx27Lhe7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"
+    integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="js\animation.js"></script>
+<script src="./js/function.js"></script>
+
+</html>
